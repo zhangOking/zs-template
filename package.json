@@ -1,0 +1,11 @@
+{
+  "name": "zs-template",
+  "version": "1.0.0",
+  "description": "a template for vue&elementui",
+  "main": "index.js",
+  "scripts": {
+    "new:page": "node ./scripts/index.js"
+  },
+  "author": "ezoking",
+  "license": "ISC"
+}
