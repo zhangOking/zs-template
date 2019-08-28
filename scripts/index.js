@@ -41,13 +41,11 @@ process.stdin.on('data', async chunk => {
   const inputName = String(chunk).trim().toString()
 
   // Vue页面组件路径
-  const vueComponentPath = resolve('../../src/views', inputName)
-
+  const vueComponentPath = resolve('../../../src/views', inputName)
   // components路径
-  const componentPath = resolve(`../../src/views/${inputName}`, 'components')
-
+  const componentPath = resolve(`../../../src/views/${inputName}`, 'components')
   // components路径
-  const unitPath = resolve(`../../src/views/${inputName}`, 'unit')
+  const unitPath = resolve(`../../../src/views/${inputName}`, 'unit')
 
   // vue文件
   const vueFile = resolve(vueComponentPath, 'index.vue')
@@ -63,7 +61,7 @@ process.stdin.on('data', async chunk => {
 
   // 判断组件文件夹是否存在
   const hasComponentExists = fs.existsSync(vueComponentPath)
-  
+
   if (hasComponentExists) {
     errorLog(`${inputName}页面组件已存在，请重新输入`)
     return
